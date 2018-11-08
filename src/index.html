@@ -24,13 +24,7 @@
           open: "false"
       }
     </script>
-  <amp-state id="appState">
-    <script type="application/json">
-      {
-        "sideMenuOpen":false
-      }
-    </script>
-  </amp-state>
+
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   <style amp-custom>
     .navbar {
@@ -158,6 +152,8 @@
 
   </style>
 </head>
+
+<body>
 <header class="navbar">
 
   <div id="site-name">
@@ -167,12 +163,18 @@
   <div id="sidebar-target-elem">
 
   </div>
-  <button id="sidemenu-toggle" tookbar="(max-width:784px)"  on="tap:sidebar.toggle,main-lightbox,AMP.setState({sideMenuOpen: !appState.sideMenuOpen}),sidemenu-toggle.hide">☰</button>
+  <button id="sidemenu-toggle"  on="tap:sidebar.toggle,main-lightbox,AMP.setState({sideMenuOpen: !appState.sideMenuOpen}),sidemenu-toggle.hide">☰</button>
 
 </header>
-<body>
-<amp-lightbox on="lightboxClose: sidemenu-toggle.show" id="main-lightbox"  layout="nodisplay" >
-  <div on="tap:sidemenu-toggle.show" class="lightbox">
+<amp-state id="appState">
+  <script type="application/json">
+    {
+      "sideMenuOpen":false
+    }
+  </script>
+</amp-state>
+<amp-lightbox role="button" on="lightboxClose: sidemenu-toggle.show" id="main-lightbox"  layout="nodisplay" >
+  <div tabindex="0" role="button" on="tap:sidemenu-toggle.show" class="lightbox">
     <button id="sidebar-close" on="tap:main-lightbox,sidemenu-toggle.toggleVisibility">X</button>
   </div>
 </amp-lightbox>
