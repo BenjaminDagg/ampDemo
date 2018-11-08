@@ -2,8 +2,12 @@
 <html amp lang="en">
 <head>
   <meta charset="utf-8">
+
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+
   <title>Hello, AMPs</title>
   <link rel="canonical" href="./index.html">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -15,9 +19,18 @@
         "datePublished": "2015-10-07T12:02:41Z",
         "image": [
           "logo.jpg"
-        ]
+        ],
+        "sidemenu" : {
+          open: "false"
       }
     </script>
+  <amp-state id="appState">
+    <script type="application/json">
+      {
+        "sideMenuOpen":false
+      }
+    </script>
+  </amp-state>
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   <style amp-custom>
     .navbar {
@@ -25,9 +38,9 @@
       height: 50px;
       top:0;
       position:fixed;
-      border: 1px solid black;
       align-items:center;
       display:flex;
+      box-shadow: 3px 1px 5px grey;
     }
 
     #site-name {
@@ -35,15 +48,21 @@
     }
 
     #sidebar-target-elem {
-      font-size: 20px;
+      font-size: 15px;
       font-weight: bold;
       margin: 0 auto;
     }
 
+    #sidebar-target-elem li::selection {
+      color: greenyellow;
+    }
+
+
     .navbar-list li {
-      float:left;
-      display:block;
+      list-style-type: none;
       margin-right: 20px;
+      color: grey;
+      font-weight: bold;
     }
 
     .navbar-title {
@@ -57,13 +76,86 @@
       background-color:white;
       border: none;
       font-size: 30px;
+      display:none;
     }
 
-    @media only screen and (min-width:784px) {
-      #sidemenu-toggle {
-        display:none;
-      }
+    #sidebar {
+      width: 250px;
+      background-color:black;
+      opacity: .80;
     }
+
+    #sidebar-close {
+      background-color: transparent;
+      color:white;
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      border:none;
+
+    }
+
+    .down-arrow {
+      font-size: 10px;
+    }
+
+    .dropdown div {
+      width: 150px;
+      height:125px;
+      position:absolute;
+      display:none;
+      box-shadow: 3px 1px 15px grey;
+    }
+
+    .dropdown button {
+      width:100%;
+      height: 30px;
+      background-color: white;
+      border:none;
+      text-align:left;
+      font-weight:bold;
+    }
+
+    .dropdown:hover div {
+      display:block;
+    }
+
+
+    .lightbox {
+      background: rgba(0,0,0,0.5);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+
+    @media only screen and (max-width:784px) {
+
+      .navbar-list {
+        margin-top: 55px;
+      }
+
+      .navbar-list li {
+        list-style-type: none;
+        margin-right: 20px;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      #sidemenu-toggle {
+        display:block;
+      }
+
+
+    }
+
   </style>
 </head>
 <header class="navbar">
@@ -75,10 +167,15 @@
   <div id="sidebar-target-elem">
 
   </div>
-  <button id="sidemenu-toggle" tookbar="(max-width:784px)"  on="tap:sidebar.toggle">☰</button>
+  <button id="sidemenu-toggle" tookbar="(max-width:784px)"  on="tap:sidebar.toggle,main-lightbox,AMP.setState({sideMenuOpen: !appState.sideMenuOpen}),sidemenu-toggle.hide">☰</button>
 
 </header>
 <body>
+<amp-lightbox on="lightboxClose: sidemenu-toggle.show" id="main-lightbox"  layout="nodisplay" >
+  <div on="tap:sidemenu-toggle.show" class="lightbox">
+    <button id="sidebar-close" on="tap:main-lightbox,sidemenu-toggle.toggleVisibility">X</button>
+  </div>
+</amp-lightbox>
 <amp-sidebar id="sidebar" layout="nodisplay" side="left">
   <nav toolbar="(min-width: 784px)" toolbar-target="sidebar-target-elem">
     <ul class="navbar-list">
@@ -86,13 +183,25 @@
         Home
       </li>
       <li>About</li>
+      <li>Features</li>
+      <li>Screenshots</li>
+      <li>Team</li>
+      <li>Pricing</li>
+      <li class="dropdown" >
+        dropdown <span class="down-arrow">&#8744</span>
+        <div class="dropdown-menu">
+          <button>option1</button>
+          <button>option2</button>
+          <button>option3</button>
+          <button>option4</button>
+        </div>
+      </li>
+      <li>Blog</li>
+      <li>Contact</li>
     </ul>
   </nav>
 
+
 </amp-sidebar>
-
-
-
-
 </body>
 </html>
