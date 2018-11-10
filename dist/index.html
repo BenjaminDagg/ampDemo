@@ -1,40 +1,1680 @@
 <!doctype html>
-<html class="no-js" lang="">
-
+<html amp lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+  <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+  <script async custom-element="amp-fx-flying-carpet" src="https://cdn.ampproject.org/v0/amp-fx-flying-carpet-0.1.js"></script>
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <title>Hello, AMPs</title>
+  <link rel="canonical" href="./index.html">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ],
+        "sidemenu" : {
+          open: "false"
+      }
+    </script>
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <style amp-custom>
+    .navbar {
+      z-index: 999;
+      background-color:white;
+      width:100%;
+      height: 50px;
+      top:0;
+      position:fixed;
+      align-items:center;
+      display:flex;
+      box-shadow: 3px 1px 5px grey;
+
+    }
+
+    .navbar-list li:hover {
+      color:yellowgreen;
+      cursor:pointer;
+    }
+
+    #site-name {
+      margin-left: 20px;
+    }
+
+    .bold-title {
+      font-size: 25px;
+      font-weight: bold;
+      color:black;
+    }
+
+    .span-title {
+      font-size: 25px;
+    }
+
+    .item-details {
+      position:absolute;
+      width:100%;
+      height: 130px;
+      bottom: 0px;
+      left:0;
+      display:none;
+      background-color:white;
+    }
+
+    .item-details h4 {
+      color: black;
+    }
+
+    #features-title-container {
+      width: 75%;
+      height: 50px;
+      margin: 0 auto;
+      text-align:center;
+      color: grey;
+      font-family: sans-serif;
+      font-weight: normal;
+    }
+
+    #gallery-title-container {
+      width: 50%;
+      height: 50px;
+      margin: 0 auto;
+      text-align:center;
+      color: grey;
+      font-family: sans-serif;
+      font-weight: normal;
+      margin-bottom: 50px;
+    }
+
+    #video-container {
+      width: 100%;
+      height: 400px;
+      margin-top: 100px;
+    }
+
+    .feature-image {
+      width: 70px;
+      height: 70px;
+      position:relative;
+      margin: 0 auto;
+    }
+
+    #sidebar-target-elem {
+
+      font-size: 15px;
+      font-weight: bold;
+      margin: 0 auto;
+    }
+
+    #sidebar-target-elem li::selection {
+      color: greenyellow;
+    }
+
+    #title-container {
+      width: 350px;
+      height:50px;
+      position:relative;
+      margin: 0 auto;
+      z-index: 1;
+    }
+
+    #features-subtext {
+      margin-top: -30px;
+    }
+
+    #sub-input {
+      position:relative;
+      float:left;
+      z-index: 2;
+      height: 48px;
+      width:200px;
+      border:none;
+      text-align:center;
+      font-size: 13px;
+    }
+
+    #sub-form {
+      position:absolute;
+      width: 350px;
+      height: 70px;
+      margin: 0 auto;
+
+    }
+
+    #sub-btn {
+      position:relative;
+      float:left;
+      height: 50px;
+      padding: 10px;
+      width:100px;
+      background-color: limegreen;
+      color:white;
+      border:none;
+    }
+
+
+
+    .table-container {
+      position:relative;
+      width: 60%;
+      margin:0 auto;
+      display: grid;
+      margin-top: 200px;
+      grid-template-columns: repeat(auto-fill, 220px);
+      grid-auto-flow: row;
+      grid-auto-rows: 220px;
+    }
+
+    .about-table-item {
+      margin-left: 30px;
+      padding: 10px;
+      width: 300px;
+      height: 200px;
+      position:relative;
+      float:left;
+      color: white;
+      text-align:left;
+      font-size: 15px;
+    }
+
+    .about-table-item ul {
+      list-style-type:none;
+      text-align:left;
+    }
+
+
+
+    .about-table-item li {
+      margin-top: 10px;
+      text-align:left;
+    }
+
+    .table-container-about {
+      position:relative;
+      width: 100%;
+      float:left;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 330px);
+      grid-auto-flow: row;
+      grid-auto-rows: 220px;
+    }
+
+    .table-container-teams {
+      position:relative;
+      width: 85%;
+      margin:0 auto;
+      display: grid;
+      margin-top: 200px;
+      grid-template-columns: repeat(auto-fill, 230px);
+      grid-auto-flow: row;
+      grid-auto-rows: 210px;
+    }
+
+    .table-container-features-content {
+      position:relative;
+      width: 85%;
+      margin: 0 auto;
+      display: grid;
+      margin-top: 200px;
+      grid-template-columns: repeat(auto-fill, 230px);
+      grid-auto-flow: row;
+      grid-auto-rows: 320px;
+    }
+
+    .table-container-social {
+      position:relative;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      margin-top: 200px;
+      grid-template-columns: repeat(auto-fill, 250px);
+      grid-auto-flow: row;
+      grid-auto-rows: 300px;
+    }
+
+    #post-table-container {
+      position:relative;
+      width: 70%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 250px);
+      grid-auto-flow: row;
+      grid-auto-rows: 300px;
+    }
+
+    #posts-content {
+
+      margin-bottom: 150px;
+    }
+
+    #price-table {
+
+      position:relative;
+      width: 90%;
+      margin: 0 auto;
+      display: grid;
+      margin-top: 200px;
+      grid-template-columns: repeat(auto-fill, 240px);
+      grid-auto-flow: row;
+      grid-auto-rows: 430px;
+    }
+
+    #carousel-content {
+      width: 50%;
+      height: 410px;
+      position:relative;
+      margin: 0 auto;
+    }
+
+    #contact-content {
+      margin-bottom: 1000px;
+    }
+
+    .table-container-mobile {
+
+      width: 70%;
+      margin: 0 auto;
+      display: grid;
+      margin-top: 200px;
+      position:relative;
+      grid-template-columns: repeat(auto-fill, 310px);
+      grid-auto-flow: row;
+      grid-auto-rows: 620px;
+    }
+
+    .table-item-mobile {
+      padding: 10px;
+      width: 200px;
+      height: 610px;
+      position:relative;
+      float:left;
+      color: grey;
+      text-align:left;
+    }
+
+    .table-item {
+      padding: 10px;
+      width: 200px;
+      height: 200px;
+      position:relative;
+      float:left;
+      color: grey;
+      text-align:center;
+    }
+
+    .social-item {
+
+      padding: 10px;
+      width: 200px;
+      height: 250px;
+      position:relative;
+      float:left;
+      color: grey;
+      text-align:center;
+
+    }
+
+    .post-table-item {
+      padding: 10px;
+      margin-top: 150px;
+      width: 200px;
+      height: 250px;
+      position:relative;
+      float:left;
+      color: grey;
+      box-shadow: 3px 3px 5px lightgray;
+      border: 1px solid lightgray;
+    }
+
+    .post-text {
+      width:100%;
+      height:50%;
+      position:absolute;
+      bottom:0px;
+    }
+
+    .post-read {
+      position:relative;
+      float:right;
+      margin-right:20px;
+    }
+
+    .price-table-item {
+      padding: 10px;
+      width: 200px;
+      height: 400px;
+      position:relative;
+      text-align:center;
+      box-shadow: 3px 3px 5px lightgray;
+      background-color:white;
+      border: 1px solid lightgray;
+    }
+
+    .foot-container {
+      width: 250px;
+      height: 100px;
+      margin: 0 auto;
+      text-align:center;
+    }
+
+    .price-table-item span {
+      color: grey;
+    }
+
+    .price-table-item h4, h3 {
+      color:black;
+    }
+
+    .table-item:hover {
+      box-shadow: 3px 3px 100px lightgray;
+    }
+
+    .table-item h4 {
+      color:black;
+
+    }
+
+    .social-btn {
+      width: 30px;
+      height: 30px;
+      background-color: yellowgreen;
+      border: 1px solid yellowgreen;
+      border-radius: 50%;
+      position:relative;
+      float:left;
+      margin-right: 5px;
+      color:white;
+      font-size: 20px;
+    }
+
+    .team-table-item {
+      padding: 10px;
+      width: 200px;
+      height: 200px;
+      position:relative;
+      float:left;
+      color: grey;
+      text-align:center;
+    }
+
+    .team-table-item:hover .item-details {
+      display:block;
+      animation-name: showTableItem;
+      animation-duration: 1s;
+    }
+
+    @keyframes showTableItem {
+      from {height:0px;}
+      to {height: 130px}
+    }
+
+
+
+    #getStartedBtn {
+
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      max-width: 150px;
+      height: 50px;
+      margin-top: 20px;
+      background-color: white;
+      border: 2px solid yellowgreen;
+      color: yellowgreen;
+      paddding: 10px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    #getStartedBtn:hover {
+      background-color:yellowgreen;
+      color:white;
+    }
+
+    #downloads-container {
+
+      width: 100%;
+      height: 30px;
+      position:relative;
+      margin:0 auto;
+      align-items:center;
+      margin-top: 20px;
+      color: grey;
+      text-align:center;
+      font-size: 12px;
+    }
+
+    .download-link {
+      margin-right: 20px;
+    }
+
+    .download-link:hover {
+      color:yellowgreen;
+      cursor: pointer;
+    }
+
+    #subtitle-container {
+      width: 400px;
+      height: 80px;
+      position: relative;
+      margin: 0 auto;
+      color: grey;
+    }
+
+
+
+    #title-text {
+      color: yellowgreen;
+      font-family: "Microsoft JhengHei";
+      z-index: 1;
+    }
+
+
+    .navbar-list li {
+      list-style-type: none;
+      margin-right: 20px;
+      color: grey;
+      font-weight: bold;
+    }
+
+    .navbar-title {
+      font-size: 30px;
+    }
+
+    #main-content {
+      position:absolute;
+      top:100px;
+      width: 100%;
+      height: 100%;
+
+    }
+
+    #home-content {
+      max-width: 600px;
+    }
+
+    #sidemenu-toggle {
+      position:absolute;
+      right: 20px;
+      font-weight: bold;
+      background-color:white;
+      border: none;
+      font-size: 30px;
+      display:none;
+    }
+
+    .price-bold {
+      font-weight: bold;
+    }
+
+    #sidebar {
+      width: 250px;
+      background-color:black;
+      opacity: .80;
+    }
+
+    .price-button {
+      width: 150px;
+      height: 40px;
+      background-color:limegreen;
+      color:white;
+      border: 1px solid limegreen;
+      border-radius: 16px;
+      margin-top: 5px;
+    }
+
+    .green-span {
+      color: yellowgreen;
+    }
+
+    .price-button:hover {
+      background-color:green;
+      border: 1px solid green;
+    }
+
+    #sidebar-close {
+      background-color: transparent;
+      color:white;
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      border:none;
+
+    }
+
+    .content-container {
+      position:relative;
+      width: 60%;
+      margin:0 auto;
+      margin-top: 30px;
+
+    }
+
+    .down-arrow {
+      font-size: 10px;
+    }
+
+    .dropdown div {
+      width: 150px;
+      height:125px;
+      position:absolute;
+      display:none;
+      box-shadow: 3px 1px 15px grey;
+      z-index: 999;
+    }
+
+    #quote-logo {
+      width: 50px;
+      height: 50px;
+      position:absolute;
+      top: -50px;
+      right: 20px;
+      font-size: 150px;
+      color:yellowgreen;
+    }
+
+    .dropdown button {
+      width:100%;
+      height: 30px;
+      background-color: white;
+      border:none;
+      text-align:left;
+      font-weight:bold;
+    }
+
+    .dropdown:hover div {
+      display:block;
+    }
+
+
+    .lightbox {
+      background: rgba(0,0,0,0.5);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .ampTabContainer {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .tabButton[selected] {
+      outline: none;
+      background: #ccc;
+    }
+
+    .tabButton {
+      list-style: none;
+      flex-grow: 1;
+      text-align: center;
+      cursor: pointer;
+      display:none;
+      background-color:white;
+      border:none;
+    }
+
+    .tabIndexBtn {
+      background-color:white;
+      border:none;
+      color:grey;
+      font-size: 50px;
+    }
+
+    .m1 {
+      width: 100px;
+      height: 20px;
+      position:relative;
+      margin: 0 auto;
+    }
+
+    .tabContent {
+      display: none;
+      width: 100%;
+      height: 400px;
+      order: 1; /* must be greater than the order of the tab buttons to flex to the next line */
+
+    }
+
+    .tabButton[selected]+.tabContent {
+      display: block;
+    }
+
+    /* For example below (not required) */
+    .itemCustom {
+      border: 1px solid #000;
+      height: 280px;
+      width: 380px;
+      margin: 10px;
+      text-align: center;
+      padding-top: 140px;
+    }
+    amp-selector {
+      padding: 1rem;
+      margin: 1rem;
+    }
+
+
+    #team-content {
+      margin-bottom: 150px;
+    }
+
+
+
+    #quote {
+      width: 70%;
+      position:relative;
+      margin: 0 auto;
+      background-color:white;
+      box-shadow: 3px 1px 5px grey;
+      overflow: hidden;
+    }
+
+    #quote p {
+      color:grey;
+    }
+
+    .quote-title {
+      font-size: 30px;
+      text-align:center;
+      color:black;
+    }
+
+    .price-row {
+      width:100%;
+      border-bottom: 1px solid lightgray;
+      height: 50px;
+    }
+
+    #subscribe-content {
+      width: 100%;
+    }
+
+    .contact-row {
+      height: 50px;
+      width: 200px;
+    }
+
+    .contact-row span {
+      position:relative;
+      float:right;
+      width: 170px;
+    }
+
+    .contact-row amp-img {
+      position:relative;
+      float:left;
+    }
+
+    .social-input {
+      width: 80%;
+      height: 25px;
+      padding: 10px;
+      background-color:white;
+      border: 1px solid lightgray;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    #scroll-btn {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      right: 50px;
+      bottom: 50px;
+      background-color: yellowgreen;
+      color:white;
+      border: 1px solid yellowgreen;
+      border-radius: 4px;
+      font-size: 40px;
+      z-index:999;
+    }
+
+    #about {
+      padding: 20px;
+      width: 100%;
+      min-height: 300px;
+      background-color:#252526;
+      color:black;
+    }
+
+
+
+    #footer-title p {
+      width: 100%;
+    }
+
+    @media only screen and (max-width:1650px) {
+      #about {
+        height: 400px;
+      }
+    }
+
+    @media only screen and (max-width:1350px) {
+      #about {
+        height: 600px;
+      }
+    }
+
+
+
+    @media only screen and (max-width:784px) {
+
+      .navbar-list {
+        margin-top: 55px;
+      }
+
+      #about {
+        height: 1000px;
+      }
+
+
+      .navbar-list li {
+        list-style-type: none;
+        margin-right: 20px;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      #sidemenu-toggle {
+        display:block;
+      }
+
+
+
+      .table-container {
+        width: 100%;
+      }
+
+      .table-container-mobile {
+        width: 100%;
+      }
+
+      .table-container-teams {
+        width: 100%;
+      }
+
+      #post-table-container {
+        width: 100%;
+      }
+
+      .table-container-social {
+        width: 100%;
+      }
+
+
+
+    }
+
+  </style>
 </head>
 
 <body>
-  <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+<header class="navbar">
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  <div id="site-name">
+    <span class="navbar-title" style="color:greenyellow">e</span >
+    <span style="color:grey" class="navbar-title">Startup</span>
+  </div>
+  <div id="sidebar-target-elem">
+
+  </div>
+  <button id="sidemenu-toggle"  on="tap:sidebar.toggle,main-lightbox,AMP.setState({sideMenuOpen: !appState.sideMenuOpen}),sidemenu-toggle.hide">☰</button>
+
+</header>
+
+<amp-state id="appState">
+  <script type="application/json">
+    {
+      "sideMenuOpen":false,
+      "quoteTab":"a"
+    }
   </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-</body>
+</amp-state>
+<amp-lightbox role="button" on="lightboxClose: sidemenu-toggle.show" id="main-lightbox"  layout="nodisplay" >
+  <div tabindex="0" role="button" on="tap:sidemenu-toggle.show" class="lightbox">
+    <button id="sidebar-close" on="tap:main-lightbox,sidemenu-toggle.toggleVisibility">X</button>
+  </div>
+</amp-lightbox>
+<amp-sidebar id="sidebar" layout="nodisplay" side="left">
+  <nav toolbar="(min-width: 784px)" toolbar-target="sidebar-target-elem">
+    <ul class="navbar-list">
+      <li role="button" tabindex="0" on="tap:main-content.scrollTo(duration=1000)">
+        Home
+      </li>
+      <li  role="button" tabindex="0" on="tap:about.scrollTo(duration=1000)">About</li>
+      <li  role="button" tabindex="0" on="tap:features-content2.scrollTo(duration=1000)">Features</li>
+      <li  role="button" tabindex="0" on="tap:carousel-content.scrollTo(duration=1000)">Screenshots</li>
+      <li  role="button" tabindex="0" on="tap:team-content.scrollTo(duration=1000)">Team</li>
+      <li  role="button" tabindex="0" on="tap:payment-content.scrollTo(duration=1000)">Pricing</li>
+      <li  role="button" tabindex="0" class="dropdown" >
+        dropdown <span class="down-arrow">&#8744</span>
+        <div class="dropdown-menu">
+          <button>option1</button>
+          <button>option2</button>
+          <button>option3</button>
+          <button>option4</button>
+        </div>
+      </li>
+      <li  role="button" tabindex="0"  on="tap:posts-content.scrollTo(duration=1000)">Blog</li>
+      <li  role="button" tabindex="0" on="tap:contact-content.scrollTo(duration=1000)">Contact</li>
+    </ul>
+  </nav>
 
+
+</amp-sidebar>
+
+<div id="main-content">
+  <button id="scroll-btn" on="tap:home-content.scrollTo(duration=1000)">^</button>
+  <div  class="content-container" id="home-content">
+    <div  id="gallery-title-container">
+    <amp-fit-text style="color:yellowgreen;font-family:Georgia, serif" width="400"
+                  height="50"
+                  max-font-size="40"
+                  layout="responsive">
+      Welcome to eStartup
+    </amp-fit-text>
+    <amp-fit-text style="font-family:Courier New, monospace" id="gallery-subtext" width="300"
+                  height="50"
+                  max-font-size="15"
+                  layout="responsive">
+      Elegant Bootstrap Template for Startups, Apps & more...
+    </amp-fit-text>
+  </div>
+    <amp-img src="./img/home-img.png"
+             height="300"
+             width="450"
+             layout="responsive"
+             >
+
+    </amp-img>
+    <button id="getStartedBtn">GET STARTED</button>
+    <div id="downloads-container">
+      <span class="download-link"> APP STORE</span>
+      <span class="download-link">Google Play</span>
+      <span class="download-link">WINDOWS</span>
+    </div>
+  </div>
+  <div class="content-container" id="features-content">
+    <div id="gallery-title-container">
+      <amp-fit-text  width="400"
+                    height="50"
+                    max-font-size="40"
+                    layout="responsive">
+        Simple Systeme Fordiscount
+      </amp-fit-text>
+      <amp-fit-text id="gallery-subtext" width="300"
+                    height="50"
+                    max-font-size="15"
+                    layout="responsive">
+        Integer Cursus Bibendum Augue Ac Cursus
+      </amp-fit-text>
+    </div>
+    <div  class="table-container">
+      <div class="table-item">
+        <div class="feature-image">
+          <amp-img src="./img/features-img1.svg"
+                   height="70"
+                   width="70"
+                   layout="fixed">
+
+          </amp-img>
+        </div>
+        <h4>INTRODUCING WHATSAPP</h4>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        </p>
+      </div>
+      <div class="table-item">
+        <div class="feature-image">
+          <amp-img src="./img/features-img2.svg"
+                   height="70"
+                   width="70"
+                   layout="fixed">
+
+          </amp-img>
+        </div>
+        <h4>USER FRIENDLY INTERFACE</h4>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        </p>
+      </div>
+      <div class="table-item">
+        <div class="feature-image">
+          <amp-img src="./img/features-img3.svg"
+                   height="70"
+                   width="70"
+                   layout="fixed">
+
+          </amp-img>
+        </div>
+        <h4>BUILD THE APP EVERYONE LOVE</h4>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="content-container" id="mobile-content">
+    <div class="table-container-mobile">
+      <div class="table-item-mobile">
+        <amp-img src="./img/cellphone.png"
+                 width="200"
+                 height="400"
+                 layout="responsive">
+
+        </amp-img>
+      </div>
+      <div class="table-item-mobile">
+        <span class="bold-title">ESTARTUP</span>
+        <span class="span-title">UI DESIGN</span>
+        <br />
+        <span class="span-title">Mobile</span>
+        <br />
+        <p>
+          Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="content-container" id="features-content2">
+    <div id="gallery-title-container">
+      <amp-fit-text width="400"
+                    height="50"
+                    max-font-size="40"
+                    layout="responsive">
+        Amazing Features
+      </amp-fit-text>
+      <amp-fit-text id="gallery-subtext" width="300"
+                    height="50"
+                    max-font-size="15"
+                    layout="responsive">
+        Integer Cursus Bibendum Augue Ac Cursus
+      </amp-fit-text>
+    </div>
+    <div class="table-container-features-content">
+      <div class="table-item">
+        <div class="feature-image">
+          <amp-img src="./img/features-img4.svg"
+                   height="70"
+                   width="70"
+                   layout="fixed">
+
+          </amp-img>
+        </div>
+        <h4>CREATIVE DESIGN</h4>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        </p>
+      </div>
+      <div class="table-item">
+        <div class="feature-image">
+          <amp-img src="./img/features-img5.svg"
+                   height="70"
+                   width="70"
+                   layout="fixed">
+
+          </amp-img>
+        </div>
+        <h4>RETINA READY</h4>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        </p>
+      </div>
+      <div class="table-item">
+        <div class="feature-image">
+          <amp-img src="./img/features-img6.svg"
+                   height="70"
+                   width="70"
+                   layout="fixed">
+
+          </amp-img>
+        </div>
+        <h4>EASY TO USE</h4>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        </p>
+      </div>
+      <div class="table-item">
+        <div class="feature-image">
+          <amp-img src="./img/features-img3.svg"
+                   height="70"
+                   width="70"
+                   layout="fixed">
+
+          </amp-img>
+        </div>
+        <h4>FREE UPDATES</h4>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        </p>
+      </div>
+      <div class="table-item">
+        <div class="feature-image">
+          <amp-img src="./img/features-img3.svg"
+                   height="70"
+                   width="70"
+                   layout="fixed">
+
+          </amp-img>
+        </div>
+        <h4>FREE UPDATES</h4>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        </p>
+      </div>
+      <div class="table-item">
+        <div class="feature-image">
+          <amp-img src="./img/features-img7.svg"
+                   height="70"
+                   width="70"
+                   layout="fixed">
+
+          </amp-img>
+        </div>
+        <h4>APP STORE SUPPORT</h4>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        </p>
+      </div>
+      <div class="table-item">
+        <div class="feature-image">
+          <amp-img src="./img/features-img8.svg"
+                   height="70"
+                   width="70"
+                   layout="fixed">
+
+          </amp-img>
+        </div>
+        <h4>PERFECT PIXEL</h4>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        </p>
+      </div>
+      <div class="table-item">
+        <div class="feature-image">
+          <amp-img src="./img/features-img9.svg"
+                   height="70"
+                   width="70"
+                   layout="fixed">
+
+          </amp-img>
+        </div>
+        <h4>CLEAN CODES</h4>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="content-container" id="carousel-content">
+    <div id="gallery-title-container">
+      <amp-fit-text width="400"
+                    height="50"
+                    max-font-size="40"
+                    layout="responsive">
+        App Gallery
+      </amp-fit-text>
+      <amp-fit-text id="gallery-subtext" width="300"
+                    height="50"
+                    max-font-size="15"
+                    layout="responsive">
+        Integer Cursus Bibendum Augue Ac Cursus
+      </amp-fit-text>
+    </div>
+    <amp-carousel
+                  height="400"
+                  type="carousel">
+      <amp-img src="./img/carousel1.jpg"
+               width="200"
+               height="400">
+
+      </amp-img>
+      <amp-img src="./img/carousel2.jpg"
+               width="200"
+               height="400">
+
+      </amp-img>
+      <amp-img src="./img/carousel3.jpg"
+               width="200"
+               height="400">
+
+      </amp-img>
+      <amp-img src="./img/carousel4.jpg"
+               width="200"
+               height="400">
+
+      </amp-img>
+      <amp-img src="./img/carousel5.jpg"
+               width="200"
+               height="400">
+
+      </amp-img>
+      <amp-img src="./img/carousel6.jpg"
+               width="200"
+               height="400">
+
+      </amp-img>
+      <amp-img src="./img/carousel7.jpg"
+               width="200"
+               height="400">
+
+      </amp-img>
+      <amp-img src="./img/carousel8.jpg"
+               width="200"
+               height="400">
+
+      </amp-img>
+      <amp-img src="./img/carousel9.jpg"
+               width="200"
+               height="400">
+
+      </amp-img>
+      <amp-img src="./img/carousel10.jpg"
+               width="200"
+               height="400">
+
+      </amp-img>
+    </amp-carousel>
+  </div>
+  <div class="content-container" id="video-container">
+    <amp-youtube
+                 height="400"
+                 data-videoid="s22ViV7tBKE">
+
+    </amp-youtube>
+  </div>
+  <div class="content-container" id="team-content">
+    <div id="gallery-title-container">
+      <amp-fit-text width="400"
+                    height="50"
+                    max-font-size="40"
+                    layout="responsive">
+        Team Members
+      </amp-fit-text>
+      <amp-fit-text id="gallery-subtext" width="300"
+                    height="50"
+                    max-font-size="15"
+                    layout="responsive">
+        Integer Cursus Bibendum Augue Ac Cursus
+      </amp-fit-text>
+    </div>
+    <div class="table-container-teams">
+      <div class="team-table-item">
+        <amp-img src="./img/team1.jpg"
+                 height="200"
+                 width="200">
+
+        </amp-img>
+        <div class="item-details">
+          <br/>
+          <br/>
+          <span class="download-link">f</span>
+          <span class="download-link">t</span>
+          <span class="download-link">in</span>
+          <br/>
+          <br/>
+          <span>Manager</span>
+          <h4>Kimberly Tran</h4>
+        </div>
+      </div>
+      <div class="team-table-item">
+        <amp-img src="./img/team2.jpg"
+                 height="200"
+                 width="200">
+
+        </amp-img>
+        <div class="item-details">
+          <br/>
+          <br/>
+          <span class="download-link">f</span>
+          <span class="download-link">t</span>
+          <span class="download-link">in</span>
+          <br/>
+          <br/>
+          <span>Manager</span>
+          <h4>Kimberly Tran</h4>
+        </div>
+      </div>
+      <div class="team-table-item">
+        <amp-img src="./img/team3.jpg"
+                 height="200"
+                 width="200">
+        </amp-img>
+        <div class="item-details">
+          <br/>
+          <br/>
+          <span class="download-link">f</span>
+          <span class="download-link">t</span>
+          <span class="download-link">in</span>
+          <br/>
+          <br/>
+          <span>Manager</span>
+          <h4>Kimberly Tran</h4>
+        </div>
+      </div>
+      <div class="team-table-item">
+        <amp-img src="./img/team4.jpg"
+                 height="200"
+                 width="200">
+        </amp-img>
+        <div class="item-details">
+          <br/>
+          <br/>
+          <span class="download-link">f</span>
+          <span class="download-link">t</span>
+          <span class="download-link">in</span>
+          <br/>
+          <br/>
+          <span>Manager</span>
+          <h4>Kimberly Tran</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-container" id="quote-content">
+
+    <div id="quote">
+      <span id="quote-logo">"</span>
+      <amp-selector on="select:AMP.setState({selectedTab: event.targetOption})"
+                    [selected]="selectedTab"
+                    role="tablist"
+                    layout="container"
+                    class="ampTabContainer">
+        <div role="tab"
+             class="tabButton"
+             selected
+             option="a">Tab one</div>
+        <div role="tabpanel"
+             class="tabContent">
+          <span class="quote-title">
+            Our Users Speack Volumes Us
+          </span>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+          </p>
+          <div class="m1">
+            <button class="tabIndexBtn" on="tap:AMP.setState({selectedTab: 'a'})">.</button>
+            <button  class="tabIndexBtn" on="tap:AMP.setState({selectedTab: 'b'})">.</button>
+            <button  class="tabIndexBtn" on="tap:AMP.setState({selectedTab: 'c'})">.</button>
+          </div>
+        </div>
+        <div role="tab"
+             class="tabButton"
+             option="b">Tab two</div>
+        <div role="tabpanel"
+             class="tabContent">
+          <span class="quote-title">
+            Our Users Speack Volumes Us
+          </span>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+          </p>
+          <div class="m1">
+            <button class="tabIndexBtn" on="tap:AMP.setState({selectedTab: 'a'})">.</button>
+            <button  class="tabIndexBtn" on="tap:AMP.setState({selectedTab: 'b'})">.</button>
+            <button  class="tabIndexBtn" on="tap:AMP.setState({selectedTab: 'c'})">.</button>
+          </div>
+        </div>
+        <div role="tab"
+             class="tabButton"
+             option="c">Tab three</div>
+        <div role="tabpanel"
+             class="tabContent">
+          <span class="quote-title">
+            Our Users Speack Volumes Us
+          </span>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+          </p>
+          <div class="m1">
+            <button class="tabIndexBtn" on="tap:AMP.setState({selectedTab: 'a'})">.</button>
+            <button  class="tabIndexBtn" on="tap:AMP.setState({selectedTab: 'b'})">.</button>
+            <button  class="tabIndexBtn" on="tap:AMP.setState({selectedTab: 'c'})">.</button>
+          </div>
+        </div>
+      </amp-selector>
+
+
+    </div>
+  </div>
+  <div class="content-container" id="payment-content">
+    <div id="gallery-title-container">
+      <amp-fit-text width="400"
+                    height="50"
+                    max-font-size="40"
+                    layout="responsive">
+        Meet With Price
+      </amp-fit-text>
+      <amp-fit-text id="gallery-subtext" width="300"
+                    height="50"
+                    max-font-size="15"
+                    layout="responsive">
+        Integer Cursus Bibendum Augue Ac Cursus
+      </amp-fit-text>
+    </div>
+    <div id="price-table">
+      <div class="price-table-item">
+        <h4>BASIC</h4>
+        <h3>$29</h3>
+        <div class="price-row">
+          <span class="price-bold">4 GB</span><span> RAM</span>
+        </div>
+        <div class="price-row">
+          <span class="price-bold">24/7</span><span> Tech Support</span>
+        </div>
+        <div class="price-row">
+          <span class="price-bold">40 GB</span><span> SSD Cloud Storage</span>
+        </div>
+        <div class="price-row">
+          <span>Monthly Backups</span>
+        </div>
+        <div class="price-row">
+          <span>Palo Protection</span>
+        </div>
+        <div class="price-btn-container">
+          <button class="price-button">BUY NOW</button>
+        </div>
+      </div>
+      <div class="price-table-item">
+        <h4>PERSONAL</h4>
+        <h3>$29</h3>
+        <div class="price-row">
+          <span class="price-bold">4 GB</span><span> RAM</span>
+        </div>
+        <div class="price-row">
+          <span class="price-bold">24/7</span><span> Tech Support</span>
+        </div>
+        <div class="price-row">
+          <span class="price-bold">40 GB</span><span> SSD Cloud Storage</span>
+        </div>
+        <div class="price-row">
+          <span>Monthly Backups</span>
+        </div>
+        <div class="price-row">
+          <span>Palo Protection</span>
+        </div>
+        <div class="price-btn-container">
+          <button class="price-button">BUY NOW</button>
+        </div>
+      </div>
+      <div class="price-table-item">
+        <h4>BUSINESS</h4>
+        <h3>$29</h3>
+        <div class="price-row">
+          <span class="price-bold">4 GB</span><span> RAM</span>
+        </div>
+        <div class="price-row">
+          <span class="price-bold">24/7</span><span> Tech Support</span>
+        </div>
+        <div class="price-row">
+          <span class="price-bold">40 GB</span><span> SSD Cloud Storage</span>
+        </div>
+        <div class="price-row">
+          <span>Monthly Backups</span>
+        </div>
+        <div class="price-row">
+          <span>Palo Protection</span>
+        </div>
+        <div class="price-btn-container">
+          <button class="price-button">BUY NOW</button>
+        </div>
+      </div>
+      <div class="price-table-item">
+        <h4>PROFESSIONAL</h4>
+        <h3>$29</h3>
+        <div class="price-row">
+          <span class="price-bold">4 GB</span><span> RAM</span>
+        </div>
+        <div class="price-row">
+          <span class="price-bold">24/7</span><span> Tech Support</span>
+        </div>
+        <div class="price-row">
+          <span class="price-bold">40 GB</span><span> SSD Cloud Storage</span>
+        </div>
+        <div class="price-row">
+          <span>Monthly Backups</span>
+        </div>
+        <div class="price-row">
+          <span>Palo Protection</span>
+        </div>
+        <div class="price-btn-container">
+          <button class="price-button">BUY NOW</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="content-container" id="posts-content">
+    <div id="gallery-title-container">
+      <amp-fit-text width="400"
+                    height="50"
+                    max-font-size="40"
+                    layout="responsive">
+        Latest Posts
+      </amp-fit-text>
+      <amp-fit-text id="gallery-subtext" width="300"
+                    height="50"
+                    max-font-size="15"
+                    layout="responsive">
+        Integer Cursus Bibendum Augue Ac Cursus
+      </amp-fit-text>
+    </div>
+    <div id="post-table-container">
+      <div  class="post-table-item">
+        <amp-img src="./img/post1.jpg"
+                 width="200"
+                 height="125">
+
+        </amp-img>
+        <div class="post-text">
+          <p>
+            Whats Isthe Difference Between Good And Bat Typography
+          </p>
+          <span class="post-date">05, jun 2017</span>
+          <span class="post-read">Read More</span>
+        </div>
+      </div>
+      <div  class="post-table-item">
+        <amp-img src="./img/post2.jpg"
+                 width="200"
+                 height="125">
+
+        </amp-img>
+        <div class="post-text">
+          <p>
+            Whats Isthe Difference Between Good And Bat Typography
+          </p>
+          <span class="post-date">05, jun 2017</span>
+          <span class="post-read">Read More</span>
+        </div>
+      </div>
+      <div  class="post-table-item">
+        <amp-img src="./img/post3.jpg"
+                 width="200"
+                 height="125">
+
+        </amp-img>
+        <div class="post-text">
+          <p>
+            Whats Isthe Difference Between Good And Bat Typography
+          </p>
+          <span class="post-date">05, jun 2017</span>
+          <span class="post-read">Read More</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="content-container" id="subscribe-content">
+    <amp-fx-flying-carpet height="700px">
+      <amp-img src="./img/la.jpg"
+               width="1000"
+               height="800"></amp-img>
+      <div id="sub-form">
+        <input placeholder="Email Address" id="sub-input" /><button id="sub-btn">SUBSCRIBE</button>
+      </div>
+    </amp-fx-flying-carpet>
+  </div>
+  <div class="content-container" id="contact-content">
+
+    <div id="gallery-title-container">
+      <amp-fit-text width="400"
+                    height="50"
+                    max-font-size="40"
+                    layout="responsive">
+        Contact
+      </amp-fit-text>
+      <amp-fit-text id="gallery-subtext" width="300"
+                    height="50"
+                    max-font-size="15"
+                    layout="responsive">
+        Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium Doloremque
+      </amp-fit-text>
+      <div class="table-container-social">
+        <div class="social-item">
+          <div class="contact-row">
+            <amp-img src="./img/marker.png"
+                     width="30"
+                     height="30">
+
+            </amp-img>
+            <span>A108 Adam Street New York, NY 535022</span>
+          </div>
+          <div class="contact-row">
+            <amp-img src="./img/email.png"
+                     width="30"
+                     height="30">
+
+            </amp-img>
+            <span>info@example.com</span>
+          </div>
+          <div class="contact-row">
+            <amp-img src="./img/phone.png"
+                     width="30"
+                     height="30">
+
+            </amp-img>
+            <span>+1 5589 55488 55s</span>
+          </div>
+          <div class="contact-row">
+            <button class="social-btn">
+              <amp-img src="./img/twitter.png"
+                       height="15"
+                       width="15">
+
+              </amp-img>
+            </button>
+            <button class="social-btn">
+              f
+            </button>
+            <button class="social-btn">
+              <amp-img src="./img/insta.png"
+                       height="15"
+                       width="15">
+
+              </amp-img>
+            </button>
+            <button class="social-btn">
+              <amp-img src="./img/gplus.png"
+                       height="15"
+                       width="15">
+
+              </amp-img>
+            </button>
+            <button class="social-btn">
+              in
+            </button>
+          </div>
+
+          </div>
+          <div class="social-item">
+            <input class="social-input" placeholder="Your Name"/>
+            <input class="social-input" placeholder="Your Email"/>
+            <input class="social-input" placeholder="Subject"/>
+            <textarea class="social-input" placeholder="Message"></textarea>
+          </div>
+        </div>
+
+    </div>
+  </div>
+  <div class="content-container" id="about">
+
+    <div class="table-container-about">
+      <div class="about-table-item" id="footer-title">
+        <h4>eStartup</h4>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.
+        </p>
+      </div>
+      <div class="about-table-item">
+        <h4>ABOUT US</h4>
+        <ul>
+          <li>About Us</li>
+          <li>Features Item</li>
+          <li>Live Streaming</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+      <div class="about-table-item">
+        <h4>ABOUT US</h4>
+        <ul>
+          <li>About Us</li>
+          <li>Features Item</li>
+          <li>Live Streaming</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+      <div class="about-table-item">
+        <h4>SUPPORT</h4>
+        <ul>
+          <li>FAQ</li>
+          <li>Editor Help</li>
+          <li>Contact Us</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+      <div class="about-table-item">
+        <h4>ABOUT US</h4>
+        <ul>
+          <li>About Us</li>
+          <li>Features Item</li>
+          <li>Live Streaming</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="content-container" id="foot">
+    <div class="foot-container">
+      <span>© Copyrights eStartup. All rights reserved.</span>
+      <br/>
+      <span>Designed by </span><span class="green-span">BootstrapMade</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
 </html>
