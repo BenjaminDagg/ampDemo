@@ -89,7 +89,7 @@
     }
 
     #gallery-title-container {
-      width: 50%;
+      width: 100%;
       height: 50px;
       margin: 0 auto;
       text-align:center;
@@ -427,9 +427,9 @@
 
       display: block;
       margin: 0 auto;
-      width: 50%;
+      width: 60%;
       max-width: 150px;
-      height: 50px;
+      height: 40px;
       margin-top: 20px;
       background-color: white;
       border: 2px solid yellowgreen;
@@ -458,7 +458,7 @@
     }
 
     .download-link {
-      margin-right: 20px;
+      margin-right: 5px;
     }
 
     .download-link:hover {
@@ -889,16 +889,15 @@
   <button id="scroll-btn" on="tap:home-content.scrollTo(duration=1000)">^</button>
   <div  class="content-container" id="home-content">
     <div  id="gallery-title-container">
-    <amp-fit-text style="color:yellowgreen;font-family:Georgia, serif" width="400"
-                  height="50"
-                  max-font-size="40"
-                  layout="responsive">
+    <amp-fit-text style="color:yellowgreen;font-family:Georgia, serif"
+                  height="30"
+                  layout="fixed-height"
+                 >
       Welcome to eStartup
     </amp-fit-text>
-    <amp-fit-text style="font-family:Courier New, monospace" id="gallery-subtext" width="300"
+    <amp-fit-text style="font-family:Courier New, monospace" id="gallery-subtext"
                   height="50"
-                  max-font-size="15"
-                  layout="responsive">
+                  layout="fixed-height">
       Elegant Bootstrap Template for Startups, Apps & more...
     </amp-fit-text>
   </div>
