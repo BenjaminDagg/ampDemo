@@ -88,7 +88,7 @@
       font-weight: normal;
     }
 
-    #gallery-title-container {
+    .gallery-title-container {
       width: 100%;
       height: 50px;
       margin: 0 auto;
@@ -860,14 +860,14 @@
 <amp-sidebar id="sidebar" layout="nodisplay" side="left">
   <nav toolbar="(min-width: 784px)" toolbar-target="sidebar-target-elem">
     <ul class="navbar-list">
-      <li role="button" tabindex="0" on="tap:sidebar.close,main-content.scrollTo(duration=1000)">
+      <li role="button" tabindex="0" on="tap:sidebar.close,welcome-title.scrollTo(duration=1000)">
         Home
       </li>
       <li  role="button" tabindex="0" on="tap:sidebar.close,about.scrollTo(duration=1000)">About</li>
-      <li  role="button" tabindex="0" on="tap:sidebar.close,features-content2.scrollTo(duration=1000)">Features</li>
-      <li  role="button" tabindex="0" on="tap:sidebar.close,carousel-content.scrollTo(duration=1000)">Screenshots</li>
-      <li  role="button" tabindex="0" on="tap:sidebar.close,team-content.scrollTo(duration=1000)">Team</li>
-      <li  role="button" tabindex="0" on="tap:sidebar.close,payment-content.scrollTo(duration=1000)">Pricing</li>
+      <li  role="button" tabindex="0" on="tap:sidebar.close,features-content2-title.scrollTo(duration=1000)">Features</li>
+      <li  role="button" tabindex="0" on="tap:sidebar.close,screenshot-title.scrollTo(duration=1000)">Screenshots</li>
+      <li  role="button" tabindex="0" on="tap:sidebar.close,team-title.scrollTo(duration=1000)">Team</li>
+      <li  role="button" tabindex="0" on="tap:sidebar.close,price-title.scrollTo(duration=1000)">Pricing</li>
       <li  role="button" tabindex="0" class="dropdown" >
         dropdown <span class="down-arrow">&#8744</span>
         <div class="dropdown-menu">
@@ -877,8 +877,8 @@
           <button>option4</button>
         </div>
       </li>
-      <li  role="button" tabindex="0"  on="tap:sidebar.close,posts-content.scrollTo(duration=1000)">Blog</li>
-      <li  role="button" tabindex="0" on="tap:sidebar.close,contact-content.scrollTo(duration=1000)">Contact</li>
+      <li  role="button" tabindex="0"  on="tap:sidebar.close,blog-title.scrollTo(duration=1000)">Blog</li>
+      <li  role="button" tabindex="0" on="tap:sidebar.close,contact-title.scrollTo(duration=1000)">Contact</li>
     </ul>
   </nav>
 
@@ -888,7 +888,7 @@
 <div id="main-content">
   <button id="scroll-btn" on="tap:home-content.scrollTo(duration=1000)">^</button>
   <div  class="content-container" id="home-content">
-    <div  id="gallery-title-container">
+    <div id="welcome-title" class="gallery-title-container">
     <amp-fit-text style="color:yellowgreen;font-family:Georgia, serif"
                   height="30"
                   layout="fixed-height"
@@ -908,7 +908,7 @@
              >
 
     </amp-img>
-    <button id="getStartedBtn">GET STARTED</button>
+    <button id="getStartedBtn" on="tap:features-title.scrollTo(duration=1000)">GET STARTED</button>
     <div id="downloads-container">
       <span class="download-link"> APP STORE</span>
       <span class="download-link">Google Play</span>
@@ -916,7 +916,7 @@
     </div>
   </div>
   <div class="content-container" id="features-content">
-    <div  id="gallery-title-container">
+    <div id="features-title" class="gallery-title-container">
       <amp-fit-text style="color:black;font-family:Courier New, monospace"
                     height="70"
                     layout="fixed-height"
@@ -997,7 +997,7 @@
     </div>
   </div>
   <div class="content-container" id="features-content2">
-    <div  id="gallery-title-container">
+    <div id="features-content2-title"  class="gallery-title-container">
       <amp-fit-text style="color:black;font-family:Courier New, monospace"
                     height="70"
                     layout="fixed-height"
@@ -1126,7 +1126,7 @@
     </div>
   </div>
   <div class="content-container" id="carousel-content">
-    <div  id="gallery-title-container">
+    <div id="screenshot-title" class="gallery-title-container">
       <amp-fit-text style="color:black;font-family:Courier New, monospace"
                     height="70"
                     layout="fixed-height"
@@ -1202,7 +1202,7 @@
     </amp-youtube>
   </div>
   <div class="content-container" id="team-content">
-    <div  id="gallery-title-container">
+    <div id="team-title" class="gallery-title-container">
       <amp-fit-text style="color:black;font-family:Courier New, monospace"
                     height="70"
                     layout="fixed-height"
@@ -1355,7 +1355,7 @@
     </div>
   </div>
   <div class="content-container" id="payment-content">
-    <div  id="gallery-title-container">
+    <div id="price-title" class="gallery-title-container">
       <amp-fit-text style="color:black;font-family:Courier New, monospace"
                     height="70"
                     layout="fixed-height"
@@ -1461,7 +1461,7 @@
 
   </div>
   <div class="content-container" id="posts-content">
-    <div  id="gallery-title-container">
+    <div id="blog-title" class="gallery-title-container">
       <amp-fit-text style="color:black;font-family:Courier New, monospace"
                     height="70"
                     layout="fixed-height"
@@ -1532,7 +1532,7 @@
   </div>
   <div class="content-container" id="contact-content">
 
-    <div  id="gallery-title-container">
+    <div id="contact-title" class="gallery-title-container">
       <amp-fit-text style="color:black;font-family:Courier New, monospace"
                     height="70"
                     layout="fixed-height"
