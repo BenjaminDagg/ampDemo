@@ -860,14 +860,14 @@
 <amp-sidebar id="sidebar" layout="nodisplay" side="left">
   <nav toolbar="(min-width: 784px)" toolbar-target="sidebar-target-elem">
     <ul class="navbar-list">
-      <li role="button" tabindex="0" on="tap:main-content.scrollTo(duration=1000)">
+      <li role="button" tabindex="0" on="tap:sidebar.close,main-content.scrollTo(duration=1000)">
         Home
       </li>
-      <li  role="button" tabindex="0" on="tap:about.scrollTo(duration=1000)">About</li>
-      <li  role="button" tabindex="0" on="tap:features-content2.scrollTo(duration=1000)">Features</li>
-      <li  role="button" tabindex="0" on="tap:carousel-content.scrollTo(duration=1000)">Screenshots</li>
-      <li  role="button" tabindex="0" on="tap:team-content.scrollTo(duration=1000)">Team</li>
-      <li  role="button" tabindex="0" on="tap:payment-content.scrollTo(duration=1000)">Pricing</li>
+      <li  role="button" tabindex="0" on="tap:sidebar.close,about.scrollTo(duration=1000)">About</li>
+      <li  role="button" tabindex="0" on="tap:sidebar.close,features-content2.scrollTo(duration=1000)">Features</li>
+      <li  role="button" tabindex="0" on="tap:sidebar.close,carousel-content.scrollTo(duration=1000)">Screenshots</li>
+      <li  role="button" tabindex="0" on="tap:sidebar.close,team-content.scrollTo(duration=1000)">Team</li>
+      <li  role="button" tabindex="0" on="tap:sidebar.close,payment-content.scrollTo(duration=1000)">Pricing</li>
       <li  role="button" tabindex="0" class="dropdown" >
         dropdown <span class="down-arrow">&#8744</span>
         <div class="dropdown-menu">
