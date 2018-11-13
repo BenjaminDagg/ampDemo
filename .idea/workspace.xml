@@ -61,14 +61,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="19238" />
+          <entry key="html" value="19426" />
           <entry key="js" value="413" />
           <entry key="json" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="19234" />
+          <entry key="HTML" value="19422" />
           <entry key="JSON" value="70" />
           <entry key="JavaScript" value="413" />
         </counts>
@@ -80,8 +80,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="912" column="51" lean-forward="true" selection-start-line="912" selection-start-column="51" selection-end-line="912" selection-end-column="51" />
+            <state relative-caret-position="418">
+              <caret line="494" column="19" lean-forward="true" selection-start-line="494" selection-start-column="19" selection-end-line="494" selection-end-column="19" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -236,8 +236,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="960" />
-    <option name="width" value="967" />
+    <option name="x" value="840" />
+    <option name="width" value="1087" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -275,7 +275,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542089257660" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542091069351" />
     <property name="last_opened_file_path" value="C:/Program Files/nodejs/node_modules/npm/node_modules/create-react-app" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -311,18 +311,18 @@
       <workItem from="1541651714125" duration="17089000" />
       <workItem from="1541726114956" duration="38494000" />
       <workItem from="1541812877599" duration="18728000" />
-      <workItem from="1542080667112" duration="8064000" />
+      <workItem from="1542080667112" duration="9083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82375000" />
+    <option name="totallyTimeSpent" value="83394000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="0" width="967" height="1047" extended-state="0" />
+    <frame x="840" y="0" width="1087" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25799337" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2278481" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Gulp" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -400,8 +400,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="912" column="51" lean-forward="true" selection-start-line="912" selection-start-column="51" selection-end-line="912" selection-end-column="51" />
+        <state relative-caret-position="418">
+          <caret line="494" column="19" lean-forward="true" selection-start-line="494" selection-start-column="19" selection-end-line="494" selection-end-column="19" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
