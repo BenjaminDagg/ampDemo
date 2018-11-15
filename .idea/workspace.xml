@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7cc09f32-6752-4a94-a7cc-fab07bd71058" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -63,14 +64,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="19445" />
+          <entry key="html" value="19524" />
           <entry key="js" value="413" />
           <entry key="json" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="19441" />
+          <entry key="HTML" value="19520" />
           <entry key="JSON" value="70" />
           <entry key="JavaScript" value="413" />
         </counts>
@@ -82,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="762" column="31" lean-forward="true" selection-start-line="762" selection-start-column="31" selection-end-line="762" selection-end-column="31" />
+            <state relative-caret-position="466">
+              <caret line="767" column="21" selection-start-line="767" selection-start-column="21" selection-end-line="767" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -277,7 +278,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542248376102" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542251508503" />
     <property name="last_opened_file_path" value="C:/Program Files/nodejs/node_modules/npm/node_modules/create-react-app" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -315,18 +316,18 @@
       <workItem from="1541812877599" duration="18728000" />
       <workItem from="1542080667112" duration="9947000" />
       <workItem from="1542168669040" duration="30000" />
-      <workItem from="1542247600369" duration="807000" />
+      <workItem from="1542247600369" duration="1859000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85095000" />
+    <option name="totallyTimeSpent" value="86147000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1074" y="0" width="853" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30769232" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30769232" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Gulp" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -344,7 +345,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32968238" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32968238" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -369,8 +370,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="762" column="31" lean-forward="true" selection-start-line="762" selection-start-column="31" selection-end-line="762" selection-end-column="31" />
+        <state relative-caret-position="466">
+          <caret line="767" column="21" selection-start-line="767" selection-start-column="21" selection-end-line="767" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />

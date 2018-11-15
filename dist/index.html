@@ -88,8 +88,8 @@
       font-weight: normal;
     }
 
-    #gallery-title-container {
-      width: 50%;
+    .gallery-title-container {
+      width: 100%;
       height: 50px;
       margin: 0 auto;
       text-align:center;
@@ -175,7 +175,7 @@
       margin-top: 200px;
       grid-template-columns: repeat(auto-fill, 220px);
       grid-auto-flow: row;
-      grid-auto-rows: 220px;
+      grid-auto-rows: 270px;
     }
 
     .about-table-item {
@@ -236,7 +236,7 @@
 
     .table-container-social {
       position:relative;
-      width: 100%;
+      width: 60%;
       margin: 0 auto;
       display: grid;
       margin-top: 200px;
@@ -280,7 +280,7 @@
     }
 
     #contact-content {
-      margin-bottom: 1000px;
+      margin-bottom: 100px;
     }
 
     .table-container-mobile {
@@ -308,7 +308,7 @@
     .table-item {
       padding: 10px;
       width: 200px;
-      height: 200px;
+      height: 250px;
       position:relative;
       float:left;
       color: grey;
@@ -427,9 +427,9 @@
 
       display: block;
       margin: 0 auto;
-      width: 50%;
+      width: 60%;
       max-width: 150px;
-      height: 50px;
+      height: 40px;
       margin-top: 20px;
       background-color: white;
       border: 2px solid yellowgreen;
@@ -458,7 +458,7 @@
     }
 
     .download-link {
-      margin-right: 20px;
+      margin-right: 5px;
     }
 
     .download-link:hover {
@@ -480,6 +480,19 @@
       color: yellowgreen;
       font-family: "Microsoft JhengHei";
       z-index: 1;
+    }
+
+    #social-submit {
+      width: 150px;
+      height: 45px;
+      background-color:yellowgreen;
+      color:white;
+      margin: 0 auto;
+      border:none;
+    }
+
+    #social-submit:hover {
+      opacity: 0.7;
     }
 
 
@@ -737,16 +750,22 @@
 
     #scroll-btn {
       position: fixed;
-      width: 40px;
-      height: 40px;
-      right: 50px;
-      bottom: 50px;
+      width: 30px;
+      height: 30px;
+      right: 30px;
+      bottom: 30px;
+      text-align: center;
       background-color: yellowgreen;
       color:white;
       border: 1px solid yellowgreen;
       border-radius: 4px;
       font-size: 40px;
       z-index:999;
+      -webkit-appearance: none;
+    }
+
+    #scroll-btn:hover {
+      cursor:pointer;
     }
 
     #about {
@@ -771,7 +790,7 @@
 
     @media only screen and (max-width:1350px) {
       #about {
-        height: 600px;
+        height: 650px;
       }
     }
 
@@ -784,7 +803,7 @@
       }
 
       #about {
-        height: 1000px;
+        height: 1050px;
       }
 
 
@@ -860,14 +879,14 @@
 <amp-sidebar id="sidebar" layout="nodisplay" side="left">
   <nav toolbar="(min-width: 784px)" toolbar-target="sidebar-target-elem">
     <ul class="navbar-list">
-      <li role="button" tabindex="0" on="tap:main-content.scrollTo(duration=1000)">
+      <li role="button" tabindex="0" on="tap:sidebar.close,welcome-title.scrollTo(duration=1000)">
         Home
       </li>
-      <li  role="button" tabindex="0" on="tap:about.scrollTo(duration=1000),sidebar.toggle">About</li>
-      <li  role="button" tabindex="0" on="tap:features-content2.scrollTo(duration=1000)">Features</li>
-      <li  role="button" tabindex="0" on="tap:carousel-content.scrollTo(duration=1000)">Screenshots</li>
-      <li  role="button" tabindex="0" on="tap:team-content.scrollTo(duration=1000)">Team</li>
-      <li  role="button" tabindex="0" on="tap:payment-content.scrollTo(duration=1000)">Pricing</li>
+      <li  role="button" tabindex="0" on="tap:sidebar.close,about.scrollTo(duration=1000)">About</li>
+      <li  role="button" tabindex="0" on="tap:sidebar.close,features-content2-title.scrollTo(duration=1000)">Features</li>
+      <li  role="button" tabindex="0" on="tap:sidebar.close,screenshot-title.scrollTo(duration=1000)">Screenshots</li>
+      <li  role="button" tabindex="0" on="tap:sidebar.close,team-title.scrollTo(duration=1000)">Team</li>
+      <li  role="button" tabindex="0" on="tap:sidebar.close,price-title.scrollTo(duration=1000)">Pricing</li>
       <li  role="button" tabindex="0" class="dropdown" >
         dropdown <span class="down-arrow">&#8744</span>
         <div class="dropdown-menu">
@@ -877,8 +896,8 @@
           <button>option4</button>
         </div>
       </li>
-      <li  role="button" tabindex="0"  on="tap:posts-content.scrollTo(duration=1000)">Blog</li>
-      <li  role="button" tabindex="0" on="tap:contact-content.scrollTo(duration=1000)">Contact</li>
+      <li  role="button" tabindex="0"  on="tap:sidebar.close,blog-title.scrollTo(duration=1000)">Blog</li>
+      <li  role="button" tabindex="0" on="tap:sidebar.close,contact-title.scrollTo(duration=1000)">Contact</li>
     </ul>
   </nav>
 
@@ -886,19 +905,18 @@
 </amp-sidebar>
 
 <div id="main-content">
-  <button id="scroll-btn" on="tap:home-content.scrollTo(duration=1000)">^</button>
+  <div role="button" id="scroll-btn" on="tap:home-content.scrollTo(duration=1000)">^</div>
   <div  class="content-container" id="home-content">
-    <div  id="gallery-title-container">
-    <amp-fit-text style="color:yellowgreen;font-family:Georgia, serif" width="400"
-                  height="50"
-                  max-font-size="40"
-                  layout="responsive">
+    <div id="welcome-title" class="gallery-title-container">
+    <amp-fit-text style="color:yellowgreen;font-family:Georgia, serif"
+                  height="30"
+                  layout="fixed-height"
+                 >
       Welcome to eStartup
     </amp-fit-text>
-    <amp-fit-text style="font-family:Courier New, monospace" id="gallery-subtext" width="300"
+    <amp-fit-text style="font-family:Courier New, monospace" id="gallery-subtext"
                   height="50"
-                  max-font-size="15"
-                  layout="responsive">
+                  layout="fixed-height">
       Elegant Bootstrap Template for Startups, Apps & more...
     </amp-fit-text>
   </div>
@@ -909,7 +927,7 @@
              >
 
     </amp-img>
-    <button id="getStartedBtn">GET STARTED</button>
+    <button id="getStartedBtn" on="tap:features-title.scrollTo(duration=1000)">GET STARTED</button>
     <div id="downloads-container">
       <span class="download-link"> APP STORE</span>
       <span class="download-link">Google Play</span>
@@ -917,17 +935,16 @@
     </div>
   </div>
   <div class="content-container" id="features-content">
-    <div id="gallery-title-container">
-      <amp-fit-text  width="400"
-                    height="50"
-                    max-font-size="40"
-                    layout="responsive">
+    <div id="features-title" class="gallery-title-container">
+      <amp-fit-text style="color:black;font-family:Courier New, monospace"
+                    height="70"
+                    layout="fixed-height"
+      >
         Simple Systeme Fordiscount
       </amp-fit-text>
-      <amp-fit-text id="gallery-subtext" width="300"
+      <amp-fit-text style="font-family:Courier New, monospace" id="gallery-subtext"
                     height="50"
-                    max-font-size="15"
-                    layout="responsive">
+                    layout="fixed-height">
         Integer Cursus Bibendum Augue Ac Cursus
       </amp-fit-text>
     </div>
@@ -999,17 +1016,16 @@
     </div>
   </div>
   <div class="content-container" id="features-content2">
-    <div id="gallery-title-container">
-      <amp-fit-text width="400"
-                    height="50"
-                    max-font-size="40"
-                    layout="responsive">
+    <div id="features-content2-title"  class="gallery-title-container">
+      <amp-fit-text style="color:black;font-family:Courier New, monospace"
+                    height="70"
+                    layout="fixed-height"
+      >
         Amazing Features
       </amp-fit-text>
-      <amp-fit-text id="gallery-subtext" width="300"
+      <amp-fit-text style="font-family:Courier New, monospace" id="gallery-subtext"
                     height="50"
-                    max-font-size="15"
-                    layout="responsive">
+                    layout="fixed-height">
         Integer Cursus Bibendum Augue Ac Cursus
       </amp-fit-text>
     </div>
@@ -1129,17 +1145,16 @@
     </div>
   </div>
   <div class="content-container" id="carousel-content">
-    <div id="gallery-title-container">
-      <amp-fit-text width="400"
-                    height="50"
-                    max-font-size="40"
-                    layout="responsive">
+    <div id="screenshot-title" class="gallery-title-container">
+      <amp-fit-text style="color:black;font-family:Courier New, monospace"
+                    height="70"
+                    layout="fixed-height"
+      >
         App Gallery
       </amp-fit-text>
-      <amp-fit-text id="gallery-subtext" width="300"
+      <amp-fit-text style="font-family:Courier New, monospace" id="gallery-subtext"
                     height="50"
-                    max-font-size="15"
-                    layout="responsive">
+                    layout="fixed-height">
         Integer Cursus Bibendum Augue Ac Cursus
       </amp-fit-text>
     </div>
@@ -1206,17 +1221,16 @@
     </amp-youtube>
   </div>
   <div class="content-container" id="team-content">
-    <div id="gallery-title-container">
-      <amp-fit-text width="400"
-                    height="50"
-                    max-font-size="40"
-                    layout="responsive">
+    <div id="team-title" class="gallery-title-container">
+      <amp-fit-text style="color:black;font-family:Courier New, monospace"
+                    height="70"
+                    layout="fixed-height"
+      >
         Team Members
       </amp-fit-text>
-      <amp-fit-text id="gallery-subtext" width="300"
+      <amp-fit-text style="font-family:Courier New, monospace" id="gallery-subtext"
                     height="50"
-                    max-font-size="15"
-                    layout="responsive">
+                    layout="fixed-height">
         Integer Cursus Bibendum Augue Ac Cursus
       </amp-fit-text>
     </div>
@@ -1360,17 +1374,16 @@
     </div>
   </div>
   <div class="content-container" id="payment-content">
-    <div id="gallery-title-container">
-      <amp-fit-text width="400"
-                    height="50"
-                    max-font-size="40"
-                    layout="responsive">
-        Meet With Price
+    <div id="price-title" class="gallery-title-container">
+      <amp-fit-text style="color:black;font-family:Courier New, monospace"
+                    height="70"
+                    layout="fixed-height"
+      >
+        Meet with Price
       </amp-fit-text>
-      <amp-fit-text id="gallery-subtext" width="300"
+      <amp-fit-text style="font-family:Courier New, monospace" id="gallery-subtext"
                     height="50"
-                    max-font-size="15"
-                    layout="responsive">
+                    layout="fixed-height">
         Integer Cursus Bibendum Augue Ac Cursus
       </amp-fit-text>
     </div>
@@ -1467,17 +1480,16 @@
 
   </div>
   <div class="content-container" id="posts-content">
-    <div id="gallery-title-container">
-      <amp-fit-text width="400"
-                    height="50"
-                    max-font-size="40"
-                    layout="responsive">
+    <div id="blog-title" class="gallery-title-container">
+      <amp-fit-text style="color:black;font-family:Courier New, monospace"
+                    height="70"
+                    layout="fixed-height"
+      >
         Latest Posts
       </amp-fit-text>
-      <amp-fit-text id="gallery-subtext" width="300"
+      <amp-fit-text style="font-family:Courier New, monospace" id="gallery-subtext"
                     height="50"
-                    max-font-size="15"
-                    layout="responsive">
+                    layout="fixed-height">
         Integer Cursus Bibendum Augue Ac Cursus
       </amp-fit-text>
     </div>
@@ -1539,19 +1551,19 @@
   </div>
   <div class="content-container" id="contact-content">
 
-    <div id="gallery-title-container">
-      <amp-fit-text width="400"
-                    height="50"
-                    max-font-size="40"
-                    layout="responsive">
+    <div id="contact-title" class="gallery-title-container">
+      <amp-fit-text style="color:black;font-family:Courier New, monospace"
+                    height="70"
+                    layout="fixed-height"
+      >
         Contact
       </amp-fit-text>
-      <amp-fit-text id="gallery-subtext" width="300"
+      <amp-fit-text style="font-family:Courier New, monospace" id="gallery-subtext"
                     height="50"
-                    max-font-size="15"
-                    layout="responsive">
+                    layout="fixed-height">
         Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium Doloremque
       </amp-fit-text>
+    </div>
       <div class="table-container-social">
         <div class="social-item">
           <div class="contact-row">
@@ -1614,10 +1626,11 @@
             <input class="social-input" placeholder="Your Email"/>
             <input class="social-input" placeholder="Subject"/>
             <textarea class="social-input" placeholder="Message"></textarea>
+            <button id="social-submit">Send Message</button>
           </div>
         </div>
 
-    </div>
+
   </div>
   <div class="content-container" id="about">
 

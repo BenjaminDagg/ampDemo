@@ -750,10 +750,11 @@
 
     #scroll-btn {
       position: fixed;
-      width: 40px;
-      height: 40px;
-      right: 50px;
-      bottom: 50px;
+      width: 30px;
+      height: 30px;
+      right: 30px;
+      bottom: 30px;
+      text-align: center;
       background-color: yellowgreen;
       color:white;
       border: 1px solid yellowgreen;
@@ -761,6 +762,10 @@
       font-size: 40px;
       z-index:999;
       -webkit-appearance: none;
+    }
+
+    #scroll-btn:hover {
+      cursor:pointer;
     }
 
     #about {
@@ -900,7 +905,7 @@
 </amp-sidebar>
 
 <div id="main-content">
-  <button id="scroll-btn" on="tap:home-content.scrollTo(duration=1000)">^</button>
+  <div role="button" id="scroll-btn" on="tap:home-content.scrollTo(duration=1000)">^</div>
   <div  class="content-container" id="home-content">
     <div id="welcome-title" class="gallery-title-container">
     <amp-fit-text style="color:yellowgreen;font-family:Georgia, serif"
