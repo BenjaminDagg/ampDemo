@@ -337,6 +337,34 @@
       margin-bottom: 100px;
     }
 
+    .carousel-inner {
+      position:relative;
+      padding:20px;
+      font-family:'Roboto', sans-serif;
+      text-align:center;
+      font-weight: 100;
+    }
+
+    .quote-person {
+      width: 250px;
+      height: 30px;
+      margin: 0 auto;
+      margin-top: 75px;
+      position:relative;
+      font-size:15px;
+    }
+
+    .quote-name {
+      font-weight:bold;
+      position:absolute;
+      left:0;
+    }
+
+    .quote-position {
+      position:absolute;
+      right:0;
+    }
+
     #contact-content {
       margin-bottom: 100px;
     }
@@ -485,7 +513,11 @@
       text-align:center;
     }
 
-
+    .social-btn:hover {
+      cursor:pointer;
+      background-color: green;
+      border: 1px solid green;
+    }
 
     .team-table-item {
       padding: 10px;
@@ -679,6 +711,7 @@
     }
 
     #quote-logo {
+      z-index:999;
       width: 50px;
       height: 50px;
       position:absolute;
@@ -781,11 +814,11 @@
 
 
     #quote {
-      width: 70%;
+      width: 100%;
       position:relative;
       margin: 0 auto;
       background-color:white;
-      box-shadow: 3px 1px 5px grey;
+      box-shadow: 3px 3px 100px grey;
       overflow: hidden;
     }
 
@@ -971,7 +1004,8 @@
 <amp-state id="appState">
   <script type="application/json">
     {
-      "slideIndex":0
+      "slideIndex":0,
+      "quoteIndex":0
     }
   </script>
 </amp-state>
@@ -1322,7 +1356,7 @@
     </amp-youtube>
   </div>
   <div class="container-fluid"  id="team-content">
-    <div id="team-title" style="width:75%";  class="gallery-title-container">
+    <div id="team-title" style="width:75%"  class="gallery-title-container">
       <amp-fit-text style="color:black;font-weight: 100;font-family:'Roboto', sans-serif"
                     height="70"
                     layout="fixed-height"
@@ -1412,10 +1446,12 @@
       </div>
     </div>
   </div>
-  <div class="content-container" id="quote-content">
+  <div class="container" id="quote-content">
 
     <div id="quote">
       <span id="quote-logo">"</span>
+      <!--
+
       <amp-selector on="select:AMP.setState({selectedTab: event.targetOption})"
                     [selected]="selectedTab"
                     role="tablist"
@@ -1474,8 +1510,48 @@
           </div>
         </div>
       </amp-selector>
+      -->
+      <amp-carousel id="quoteCarousel"
+                    on="slideChange:AMP.setState({appState: {quoteIndex: event.index}})"
+                    height="400"
+                    type="slides">
+        <div class="carousel-inner">
+          <h1>Our users Speak Volumes to Us</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+          </p>
+          <div class="quote-person">
+            <span class="quote-name">KIMBLERLY TRAN</span>
+            <span class="quote-position">MANAGER</span>
+          </div>
+        </div>
+        <div class="carousel-inner">
+          <h1>Our users Speak Volumes to Us</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+          </p>
+          <div class="quote-person">
+            <span class="quote-name">HENDERSON</span>
+            <span class="quote-position">MANAGER</span>
+          </div>
+        </div>
+        <div class="carousel-inner">
+          <h1>Our users Speak Volumes to Us</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+          </p>
+          <div class="quote-person">
+            <span class="quote-name">DAVID SPARK</span>
+            <span class="quote-position">MANAGER</span>
+          </div>
+        </div>
 
-
+      </amp-carousel>
+      <div  id="carousel-buttons">
+        <button [class]="appState.quoteIndex == 0 ? 'carousel-btn-selected' : 'carousel-btn'" class="carousel-btn-selected" on="tap:quoteCarousel.goToSlide(index=0)"></button>
+        <button [class]="appState.quoteIndex == 1 ? 'carousel-btn-selected' : 'carousel-btn'"  class="carousel-btn" on="tap:quoteCarousel.goToSlide(index=1)"></button>
+        <button [class]="appState.quoteIndex == 2 ? 'carousel-btn-selected' : 'carousel-btn'" class="carousel-btn" on="tap:quoteCarousel.goToSlide(index=2)"></button>
+      </div>
     </div>
   </div>
   <div class="container-fluid" id="payment-content">
@@ -1644,7 +1720,7 @@
     </div>
 
   </div>
-  <div class="container-fluid" style="background-color:blue" id="subscribe-content">
+  <div class="container-fluid" id="subscribe-content">
     <div style="width: 100%;margin:0 auto;position:absolute;z-index:999;margin-top: 100px;" class="row justify-content-md-center">
       <div class="col-12 col-md-8">
         <input id="subscribe-input" placeholder="Email Address" />
@@ -1654,7 +1730,12 @@
       </div>
     </div>
     <div style="width: 100%;margin:0 auto;position:absolute;z-index:999;margin-top: 165px;" class="row justify-content-md-center">
-      <div class="col-2">
+      <div class="col-3">
+        <div class="social-btn">
+          f
+        </div>
+      </div>
+      <div class="col-3">
         <div class="social-btn">
           <amp-img src="./img/twitter.png"
                    height="15"
@@ -1663,21 +1744,7 @@
           </amp-img>
         </div>
       </div>
-      <div class="col-2">
-        <div class="social-btn">
-          f
-        </div>
-      </div>
-      <div class="col-2">
-        <div class="social-btn">
-          <amp-img src="./img/insta.png"
-                   height="15"
-                   width="15">
-
-          </amp-img>
-        </div>
-      </div>
-      <div class="col-2">
+      <div class="col-3">
         <div class="social-btn">
           <amp-img src="./img/gplus.png"
                    height="15"
@@ -1686,7 +1753,7 @@
           </amp-img>
         </div>
       </div>
-      <div class="col-2">
+      <div class="col-3">
         <div class="social-btn">
           in
         </div>
@@ -1701,7 +1768,7 @@
   </div>
   <div class="container-fluid" id="contact-content">
 
-    <div id="contact-title" style="width:75%" class="gallery-title-container">
+    <div id="contact-title" style="width:50%" class="gallery-title-container">
       <amp-fit-text style="color:black;font-weight: 100;font-family:'Roboto', sans-serif"
                     height="70"
                     layout="fixed-height"
@@ -1743,6 +1810,7 @@
           <div class="contact-row">
             <div class="social-btn">
               <amp-img src="./img/twitter.png"
+                       style="margin-left:5px;"
                        height="15"
                        width="15">
 
@@ -1753,6 +1821,7 @@
             </div>
             <div class="social-btn">
               <amp-img src="./img/insta.png"
+                       style="margin-left:5px;"
                        height="15"
                        width="15">
 
@@ -1760,6 +1829,7 @@
             </div>
             <div class="social-btn">
               <amp-img src="./img/gplus.png"
+                       style="margin-left:5px;"
                        height="15"
                        width="15">
 
