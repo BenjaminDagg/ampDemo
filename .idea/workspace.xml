@@ -65,14 +65,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="23788" />
+          <entry key="html" value="23867" />
           <entry key="js" value="413" />
           <entry key="json" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="23784" />
+          <entry key="HTML" value="23863" />
           <entry key="JSON" value="70" />
           <entry key="JavaScript" value="413" />
         </counts>
@@ -84,8 +84,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="481" column="22" lean-forward="true" selection-start-line="481" selection-start-column="22" selection-end-line="481" selection-end-column="22" />
+            <state relative-caret-position="449">
+              <caret line="488" lean-forward="true" selection-start-line="488" selection-end-line="488" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -189,7 +189,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>#quote</find>
       <find>only</find>
       <find>.table-container-so</find>
       <find>.table-container-social</find>
@@ -219,6 +218,7 @@
       <find>amp-car</find>
       <find>#about</find>
       <find>subscribe-in</find>
+      <find>social-btn</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -255,8 +255,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="966" />
-    <option name="width" value="961" />
+    <option name="x" value="907" />
+    <option name="width" value="1020" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -334,18 +334,18 @@
       <workItem from="1542080667112" duration="9947000" />
       <workItem from="1542168669040" duration="30000" />
       <workItem from="1542247600369" duration="33189000" />
-      <workItem from="1542329688891" duration="3081000" />
+      <workItem from="1542329688891" duration="4233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120558000" />
+    <option name="totallyTimeSpent" value="121710000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="966" y="0" width="961" height="1047" extended-state="0" />
+    <frame x="907" y="0" width="1020" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22419533" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21041666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Gulp" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -391,8 +391,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="481" column="22" lean-forward="true" selection-start-line="481" selection-start-column="22" selection-end-line="481" selection-end-column="22" />
+        <state relative-caret-position="449">
+          <caret line="488" lean-forward="true" selection-start-line="488" selection-end-line="488" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
