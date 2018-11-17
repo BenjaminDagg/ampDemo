@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cc09f32-6752-4a94-a7cc-fab07bd71058" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -68,14 +66,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="26385" />
+          <entry key="html" value="26388" />
           <entry key="js" value="413" />
           <entry key="json" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="26380" />
+          <entry key="HTML" value="26383" />
           <entry key="JSON" value="71" />
           <entry key="JavaScript" value="413" />
         </counts>
@@ -349,12 +347,12 @@
       <workItem from="1542168669040" duration="30000" />
       <workItem from="1542247600369" duration="33189000" />
       <workItem from="1542329688891" duration="18101000" />
-      <workItem from="1542429455139" duration="11037000" />
+      <workItem from="1542429455139" duration="11204000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146615000" />
+    <option name="totallyTimeSpent" value="146782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
