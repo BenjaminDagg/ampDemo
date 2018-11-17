@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 
@@ -19,7 +20,10 @@
 
   <title>Hello, AMPs</title>
   <link rel="canonical" href="./index.html">
+
+  <!--
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  -->
   <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -50,7 +54,7 @@
     }
 
 
-    body {
+    html, body {
       max-width:100%;
       overflow-x:hidden;
     }
@@ -59,6 +63,15 @@
 
     .container {
       margin-bottom: 50px;
+      padding-left:0px;
+      padding-right:0px;
+      padding:0px;
+    }
+
+    .container-fluid {
+      padding-left:0px;
+      padding-right:0px;
+      padding:0px;
     }
 
     .justify-content-md-center {
@@ -1326,31 +1339,33 @@
       </amp-fit-text>
     </div>
 
-    <amp-carousel id="carousel"
-                  on="slideChange:AMP.setState({appState: {slideIndex: event.index}})"
-                  height="400"
-                  type="slides">
-      <amp-img src="./img/carousel-collection1.jpg"
-               width="800"
-               height="400">
+    <div style="width:50%;position:relative;margin:0 auto">
+      <amp-carousel id="carousel"
+                    on="slideChange:AMP.setState({appState: {slideIndex: event.index}})"
+                    height="400"
+                    type="slides">
+        <amp-img src="./img/carousel-collection1.jpg"
+                 width="800"
+                 height="400">
 
-      </amp-img>
-      <amp-img src="../img/carousel-collection2.jpg"
-               width="800"
-               height="400">
+        </amp-img>
+        <amp-img src="../img/carousel-collection2.jpg"
+                 width="800"
+                 height="400">
 
-      </amp-img>
-      <amp-img src="./img/carousel-collection3.jpg"
-               width="800"
-               height="400">
+        </amp-img>
+        <amp-img src="./img/carousel-collection3.jpg"
+                 width="800"
+                 height="400">
 
-      </amp-img>
+        </amp-img>
 
-    </amp-carousel>
-    <div  id="carousel-buttons">
-      <button [class]="appState.slideIndex == 0 ? 'carousel-btn-selected' : 'carousel-btn'" class="carousel-btn-selected" on="tap:carousel.goToSlide(index=0)"></button>
-      <button [class]="appState.slideIndex == 1 ? 'carousel-btn-selected' : 'carousel-btn'"  class="carousel-btn" on="tap:carousel.goToSlide(index=1)"></button>
-      <button [class]="appState.slideIndex == 2 ? 'carousel-btn-selected' : 'carousel-btn'" class="carousel-btn" on="tap:carousel.goToSlide(index=2)"></button>
+      </amp-carousel>
+      <div  id="carousel-buttons">
+        <button [class]="appState.slideIndex == 0 ? 'carousel-btn-selected' : 'carousel-btn'" class="carousel-btn-selected" on="tap:carousel.goToSlide(index=0)"></button>
+        <button [class]="appState.slideIndex == 1 ? 'carousel-btn-selected' : 'carousel-btn'"  class="carousel-btn" on="tap:carousel.goToSlide(index=1)"></button>
+        <button [class]="appState.slideIndex == 2 ? 'carousel-btn-selected' : 'carousel-btn'" class="carousel-btn" on="tap:carousel.goToSlide(index=2)"></button>
+      </div>
     </div>
 
   </div>
@@ -1707,6 +1722,7 @@
     </div>
     <amp-fx-flying-carpet style="width:100%" height="300px">
       <amp-img src="./img/la.jpg"
+               style="overflow-x:hidden"
                width="1000"
                height="800"></amp-img>
 

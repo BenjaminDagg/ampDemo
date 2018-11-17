@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cc09f32-6752-4a94-a7cc-fab07bd71058" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -66,14 +68,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="25603" />
+          <entry key="html" value="25653" />
           <entry key="js" value="413" />
           <entry key="json" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="25598" />
+          <entry key="HTML" value="25648" />
           <entry key="JSON" value="71" />
           <entry key="JavaScript" value="413" />
         </counts>
@@ -85,8 +87,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="142">
+              <caret line="1340" lean-forward="true" selection-start-line="1340" selection-end-line="1340" />
               <folding>
                 <element signature="e#19543#19786#2" expanded="true" />
                 <element signature="e#20551#20800#2" expanded="true" />
@@ -107,6 +109,7 @@
                 <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#amp-fit-text#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#amp-fit-text#1;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#amp-fit-text#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#amp-fit-text#1;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -196,14 +199,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>amp-fit</find>
-      <find>amazin</find>
       <find>.table-cont</find>
       <find>.table-conta</find>
       <find>contact</find>
       <find>team</find>
       <find>#featur</find>
-      <find>welcome</find>
       <find>.table-item</find>
       <find>#features</find>
       <find>.d-lg-bl</find>
@@ -220,12 +220,15 @@
       <find>subscribe</find>
       <find>subscribe-in</find>
       <find>amp-carouse</find>
-      <find>#quote</find>
       <find>amp-carou</find>
       <find>appState</find>
       <find>scroll</find>
       <find>.nav</find>
       <find>.navbar</find>
+      <find>welcome</find>
+      <find>#video</find>
+      <find>video</find>
+      <find>#quote</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -342,12 +345,12 @@
       <workItem from="1542168669040" duration="30000" />
       <workItem from="1542247600369" duration="33189000" />
       <workItem from="1542329688891" duration="18101000" />
-      <workItem from="1542429455139" duration="2185000" />
+      <workItem from="1542429455139" duration="2740000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137763000" />
+    <option name="totallyTimeSpent" value="138318000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
@@ -402,8 +405,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="142">
+          <caret line="1340" lean-forward="true" selection-start-line="1340" selection-end-line="1340" />
           <folding>
             <element signature="e#19543#19786#2" expanded="true" />
             <element signature="e#20551#20800#2" expanded="true" />
@@ -424,6 +427,7 @@
             <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#amp-fit-text#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#amp-fit-text#1;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#amp-fit-text#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#amp-fit-text#1;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

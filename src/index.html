@@ -1339,31 +1339,33 @@
       </amp-fit-text>
     </div>
 
-    <amp-carousel id="carousel"
-                  on="slideChange:AMP.setState({appState: {slideIndex: event.index}})"
-                  height="400"
-                  type="slides">
-      <amp-img src="./img/carousel-collection1.jpg"
-               width="800"
-               height="400">
+    <div style="width:50%;position:relative;margin:0 auto">
+      <amp-carousel id="carousel"
+                    on="slideChange:AMP.setState({appState: {slideIndex: event.index}})"
+                    height="400"
+                    type="slides">
+        <amp-img src="./img/carousel-collection1.jpg"
+                 width="800"
+                 height="400">
 
-      </amp-img>
-      <amp-img src="../img/carousel-collection2.jpg"
-               width="800"
-               height="400">
+        </amp-img>
+        <amp-img src="../img/carousel-collection2.jpg"
+                 width="800"
+                 height="400">
 
-      </amp-img>
-      <amp-img src="./img/carousel-collection3.jpg"
-               width="800"
-               height="400">
+        </amp-img>
+        <amp-img src="./img/carousel-collection3.jpg"
+                 width="800"
+                 height="400">
 
-      </amp-img>
+        </amp-img>
 
-    </amp-carousel>
-    <div  id="carousel-buttons">
-      <button [class]="appState.slideIndex == 0 ? 'carousel-btn-selected' : 'carousel-btn'" class="carousel-btn-selected" on="tap:carousel.goToSlide(index=0)"></button>
-      <button [class]="appState.slideIndex == 1 ? 'carousel-btn-selected' : 'carousel-btn'"  class="carousel-btn" on="tap:carousel.goToSlide(index=1)"></button>
-      <button [class]="appState.slideIndex == 2 ? 'carousel-btn-selected' : 'carousel-btn'" class="carousel-btn" on="tap:carousel.goToSlide(index=2)"></button>
+      </amp-carousel>
+      <div  id="carousel-buttons">
+        <button [class]="appState.slideIndex == 0 ? 'carousel-btn-selected' : 'carousel-btn'" class="carousel-btn-selected" on="tap:carousel.goToSlide(index=0)"></button>
+        <button [class]="appState.slideIndex == 1 ? 'carousel-btn-selected' : 'carousel-btn'"  class="carousel-btn" on="tap:carousel.goToSlide(index=1)"></button>
+        <button [class]="appState.slideIndex == 2 ? 'carousel-btn-selected' : 'carousel-btn'" class="carousel-btn" on="tap:carousel.goToSlide(index=2)"></button>
+      </div>
     </div>
 
   </div>
