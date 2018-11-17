@@ -68,14 +68,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="25840" />
+          <entry key="html" value="25909" />
           <entry key="js" value="413" />
           <entry key="json" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="25835" />
+          <entry key="HTML" value="25904" />
           <entry key="JSON" value="71" />
           <entry key="JavaScript" value="413" />
         </counts>
@@ -87,8 +87,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="1623" column="10" lean-forward="true" selection-start-line="1623" selection-start-column="10" selection-end-line="1623" selection-end-column="10" />
+            <state relative-caret-position="449">
+              <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
               <folding>
                 <element signature="e#19543#19786#2" expanded="true" />
                 <element signature="e#20551#20800#2" expanded="true" />
@@ -110,6 +110,7 @@
                 <element signature="n#style#0;n#amp-fit-text#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#amp-fit-text#1;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#amp-fit-text#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -205,9 +206,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>contact</find>
-      <find>team</find>
-      <find>#featur</find>
       <find>.table-item</find>
       <find>#features</find>
       <find>.d-lg-bl</find>
@@ -230,11 +228,14 @@
       <find>.navbar</find>
       <find>welcome</find>
       <find>#video</find>
-      <find>video</find>
       <find>width:</find>
       <find>#quote</find>
       <find>subscribe-in</find>
       <find>container-fl</find>
+      <find>style=&quot;width</find>
+      <find>style=&quot;width:95</find>
+      <find>video</find>
+      <find>subscribe-but</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -351,12 +352,12 @@
       <workItem from="1542168669040" duration="30000" />
       <workItem from="1542247600369" duration="33189000" />
       <workItem from="1542329688891" duration="18101000" />
-      <workItem from="1542429455139" duration="4644000" />
+      <workItem from="1542429455139" duration="5180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140222000" />
+    <option name="totallyTimeSpent" value="140758000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
@@ -411,8 +412,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="1623" column="10" lean-forward="true" selection-start-line="1623" selection-start-column="10" selection-end-line="1623" selection-end-column="10" />
+        <state relative-caret-position="449">
+          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
           <folding>
             <element signature="e#19543#19786#2" expanded="true" />
             <element signature="e#20551#20800#2" expanded="true" />
@@ -434,6 +435,7 @@
             <element signature="n#style#0;n#amp-fit-text#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#amp-fit-text#1;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#amp-fit-text#0;n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
